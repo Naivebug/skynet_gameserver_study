@@ -1,0 +1,20 @@
+-:----maxaccount  
+-:maxaccount rz  {[1]={MAX(rl_sRoleID)=10022,},}  0  {MAX(rl_sRoleID)=10022,}  
+-:++++maxaccount rz  0  {MAX(rl_uID)=10022,}  
+-:----------self.m_nMaxRoleID  10022  
+-:agetn inti 11  16777247  
+-:==sendPackage:  9  1  1  
+-:--netcommon bigid0-  229  14  0  0  
+-:****Warn***:  --warn--netcommon bigid no config:   229  14  
+-:agetn inti 11  16777248  
+-:==sendPackage:  10  1  1  
+-:--netcommon bigid0-  229  14  0  0  
+-:****Warn***:  --warn--netcommon bigid no config:   229  14  
+-:SocketClose  
+-:---memery4  185.357421875  
+-:-------save game  
+-:OffLine---  
+-:SocketClose  
+-:---memery4  185.357421875  
+-:-------save game  
+-:OffLine---  

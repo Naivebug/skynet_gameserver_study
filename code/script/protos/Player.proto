@@ -1,0 +1,47 @@
+package Protocol;
+//大协议号:32
+
+//---------客户端到服务器---------------------------------------------------------
+//------------c2s-------------
+
+//c2s子协议号:5~请求修改玩家名字
+message C2SPlayerChangeName {
+  required string name = 1;//新名字
+}
+
+//-----------------------------------------------
+//---------服务器到客户端---------------------------------------------------------
+//-------------s2c--------------------------------
+
+
+//s2c子协议号1~更新玩家的经验值
+message S2CPlayerExp {
+    required int64 exp = 1; // 玩家经验
+	required int32 lv = 2; // 玩家等级
+}
+
+//s2c子协议号2~更新玩家的金币
+message S2CPlayerGold {
+    required int64 gold = 1; // 金币
+}
+
+//s2c子协议号3~更新玩家的钻石
+message S2CPlayerDiamond {
+    required int64 gem = 1; // 钻石
+}
+
+//s2c子协议号4~更新玩家的体力
+message S2CPlayerVit {
+    required int32 vit = 1; // 体力
+	required int32 remaintime = 2; //体力值恢复计时开始时间
+	required int32 buyvittimes = 3;	//当天购买体力的次数
+}
+
+//s2c子协议号5~更新玩家名字
+message S2CPlayerChangeName {
+    required string name = 1;//新名字
+}
+
+
+
+

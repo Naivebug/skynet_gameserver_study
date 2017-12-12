@@ -1,0 +1,4 @@
+-:----maxaccount  
+-:maxaccount rz  {[1]={MAX(rl_sRoleID)=10001,},}  0  {MAX(rl_sRoleID)=10001,}  
+-:++++maxaccount rz  0  {MAX(rl_uID)=10001,}  
+-:----------self.m_nMaxRoleID  10001  

@@ -1,0 +1,47 @@
+package Protocol;
+//大协议号:34 宠物协议
+
+//---------客户端到服务器---------------------------------------------------------
+//C2S子协议号1:~请求修改宠物名字
+message C2SChangePetName {
+	required int32 id = 1;//宠物ID
+	required string name = 2;//宠物的新名字
+}
+
+
+
+//-----------------------------------------------
+//---------服务器到客户端---------------------------------------------------------
+//-------------s2c--------------------------------
+//大协议号:34 宠物协议
+//通用Message
+//宠物升级或进化后等等增加的属性
+message S2CPetDataAdd{ //宠物数值增加
+	required int32 hp = 1; // HP
+    required int32 lv = 2; // 等级
+    required int32 atk = 3; // 物攻
+    required int32 matk = 4; // 法攻
+    required int32 def = 5; // 物防
+    required int32 mdef = 6; // 法防
+    required int32 speed = 7; // 速度
+}
+//s2c子协议号1--发送一个宠物
+message S2COnePet {
+    required int32 id = 1; //宠物ID
+    required int32 sid = 2; //宠物造型ID
+    required string name = 3; //宠物名字
+    required int32 exp = 4;//当前经验
+    required int32 hp = 5; // HP
+    required int32 lv = 6; // 等级
+    required int32 atk = 7; // 物攻
+    required int32 matk = 8; // 法攻
+}
+//S2C子协议号2,添加一个宠物
+message S2CAddPet {
+	required S2COnePet addpet=1;//去解一个
+}
+//S2C子协议3,一次发送多个宠物
+message S2CMorePet {
+	repeated S2COnePet pets=1;//去解多个
+}
+/

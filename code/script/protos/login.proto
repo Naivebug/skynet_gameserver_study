@@ -1,0 +1,11 @@
+syntax = "proto2";
+package login;
+message Login {
+    required string account = 1;
+    required string password = 2;
+}
+
+message createRole {
+    required string name = 1;
+    required int32 sex = 2;
+}

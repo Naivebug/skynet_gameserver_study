@@ -1,0 +1,37 @@
+package Protocol;
+//大协议号:1
+
+//---------客户端到服务器---------------------------------------------------------
+//------------c2s-------------
+//c2s子协议号:1~登录
+message C2SLogin {
+  required string account = 1; //账号
+  required string pwd = 2;     //密码
+  required int32 servernumber = 3;     //服务器区号
+  optional string mac = 4; //机器mac
+}
+
+
+//-----------------------------------------------
+//---------服务器到客户端---------------------------------------------------------
+//-------------s2c--------------------------------
+//s2c子协议号1--发送hello包,表示连接成功,您可以登录处理
+message S2CHello {
+  required int32 randseed = 1; //客户端可以当做随机种子
+  required int32 servertime = 2; //服务器时间      
+}
+//s2c子协议号2
+message S2CLoginSuccess {
+    required int64 id = 1; //玩家ID
+    required string name = 2; //玩家名字
+    required int32 servernumber = 3;//服务器区号
+    required int32 shape = 4; // 玩家造型
+    required int32 lv = 5; // 玩家等级
+    required int64 exp = 6; // 玩家经验
+    required int64 gold = 7; // 金币
+    required int64 gem = 8; // 钻石
+    
+	
+}
+
+
