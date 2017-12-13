@@ -48,7 +48,7 @@ end
 function Chero:GetName()  --获得名字
     local name = self:Query("name","")
     if "" == name then
-        name = self.m_PetName
+        name = self.m_Name
     end
     return name
 end

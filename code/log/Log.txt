@@ -1,20 +1,42 @@
 -:----maxaccount  
--:maxaccount rz  {[1]={MAX(rl_sRoleID)=10022,},}  0  {MAX(rl_sRoleID)=10022,}  
--:++++maxaccount rz  0  {MAX(rl_uID)=10022,}  
--:----------self.m_nMaxRoleID  10022  
+-:maxaccount rz  {[1]={},}  0  {}  
+-:++++maxaccount rz  0  {}  
+-:----------self.m_nMaxRoleID  10000  
 -:agetn inti 11  16777247  
 -:==sendPackage:  9  1  1  
--:--netcommon bigid0-  229  14  0  0  
--:****Warn***:  --warn--netcommon bigid no config:   229  14  
--:agetn inti 11  16777248  
--:==sendPackage:  10  1  1  
--:--netcommon bigid0-  229  14  0  0  
--:****Warn***:  --warn--netcommon bigid no config:   229  14  
--:SocketClose  
--:---memery4  185.357421875  
--:-------save game  
--:OffLine---  
--:SocketClose  
--:---memery4  185.357421875  
--:-------save game  
--:OffLine---  
+-:--netcommon bigid0-  1  1  0  0  
+-:netbase.C2SLogin data:  {pwd="pwd",mac="mac",servernumber=1,account="test1",}  
+-:self.CheckLoginEnter11  
+-:self.CheckLoginEnter22  
+-:CheckGMLogin00  
+-:---iscanlogin  true  
+-:self.isCanLogin++  true  
+-:self.CheckLoginEnter33  
+-:GetMaxRoleID()  10001  
+-:self.insertAccount  10001  test1  
+-:sql insertaccount  INSERT INTO `tbl_account` (`rl_sAccount`,    `rl_sRoleID`)  VALUES ('test1',    10001)  
+-:infoid  10001  
+-:self.LoadPlayerData m_DBList  1  
+-:self.m_WhenUpdateSaveList  1  
+-:createpropdata load data  {}  
+-:self.m_WhenUpdateSaveList  2  
+-:self.m_WhenUpdateSaveList  3  
+-:self.m_WhenUpdateSaveList  4  
+-:otherdb_createotherdb data  {}  
+-:self.m_WhenUpdateSaveList  5  
+-:---game will enter  
+-:--------gameenter  10001  9  临时name名字  1  
+-:-----------gameEnter  
+-:++-create end  
+-:==sendPackage:  9  1  2  
+-:--netcommon bigid0-  1  1  0  0  
+-:netbase.C2SLogin data:  {pwd="pwd",mac="mac",servernumber=1,account="test1",}  
+-:self.CheckLoginEnter11  
+-:-------netpet.LoginSendAll-----------  
+-:---memery3  212.732421875  
+-:-------save game  10001  
+-:k,sobj  1  
+-:k,sobj  2  
+-:k,sobj  3  
+-:k,sobj  4  
+-:k,sobj  5  
